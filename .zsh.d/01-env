@@ -1,0 +1,19 @@
+
+export EDITOR=vim
+export PYTHONPATH=/home/jjones/pylib
+
+path=(. ~/bin /bin /usr/bin /usr/local/bin /sbin /usr/sbin /usr/local/sbin $path)
+
+if which dircolors > /dev/null; then
+    eval `dircolors -b`
+fi
+
+watch=(any any)
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+unsetopt autocd beep extendedglob nomatch notify
+bindkey -e
+

@@ -1,0 +1,8 @@
+
+autoload -U colors && colors
+p_prefix="%{$reset_color%}[%h] <"
+case $USER in
+    'root') PROMPT="${p_prefix}%{$fg[red]%}%m%{$reset_color%}>>";;
+    *) PROMPT="${p_prefix}%{$fg[green]%}%m%{$reset_color%}>";;
+esac
+
