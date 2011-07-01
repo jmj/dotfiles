@@ -1,0 +1,34 @@
+# Call pushd silently, but act like cd when no argument is given.
+function pd()
+{
+  if [[ -z "$1" ]]
+  then
+      pushd "$HOME" >/dev/null
+  else
+      pushd "$1" >/dev/null
+  fi
+}
+
+
+
+alias cd="pd "
+
+
+
+function go()
+{
+  IFS_bak_go="$IFS"
+  IFS='
+'
+
+  select Selection in $(dirs -p | sort -n | uniq); do break; done
+
+  # In case of ^D or somesuch
+  if [[ -z "$Selection" ]]; then return 255; fi
+
+  # Manually expand tilde.
+  pd "${Selection/\~/$HOME}"
+
+  IFS="$IFS_bak_go"
+}
+
