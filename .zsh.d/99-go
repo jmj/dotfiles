@@ -1,3 +1,4 @@
+exit 0  #disabled
 # Call pushd silently, but act like cd when no argument is given.
 function pd()
 {

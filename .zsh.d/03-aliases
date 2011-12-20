@@ -1,4 +1,8 @@
 
 alias c=clear
-alias ls="ls --color=auto"
+if [ "$(uname)x" = "Darwinx" ]; then
+    alias ls="ls -G"
+else
+    alias ls="ls --color=auto"
+fi
 
