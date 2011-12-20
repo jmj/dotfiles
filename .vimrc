@@ -36,3 +36,5 @@ endif
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 au BufNewFile,BufRead *.ns set filetype=tcl
+
+call pathogen#infect('~/src/dotfiles/vimplugs')
