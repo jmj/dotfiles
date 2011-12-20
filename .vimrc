@@ -11,7 +11,6 @@ set ruler
 set expandtab
 set hidden
 let Tlist_Ctags_Cmd='/usr/bin/ctags-exuberant'
-color torte
 
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -39,3 +38,12 @@ au BufNewFile,BufRead *.ns set filetype=tcl
 
 call pathogen#infect('~/src/dotfiles/vimplugs')
 Helptags
+
+
+
+
+" color torte
+" Solarize
+set background=dark
+colorscheme solarized
+
