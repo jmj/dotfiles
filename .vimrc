@@ -12,6 +12,9 @@ set expandtab
 set hidden
 let Tlist_Ctags_Cmd='/usr/bin/ctags-exuberant'
 
+" omni complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
     let _s=@/
