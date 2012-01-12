@@ -42,8 +42,12 @@ Helptags
 
 
 
-" color torte
+color torte
 " Solarize
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
+" powerline
+set t_Co=256
+set laststatus=2
+let g:Powerline_symbols = 'unicode'
