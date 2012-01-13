@@ -15,6 +15,15 @@ let Tlist_Ctags_Cmd='/usr/bin/ctags-exuberant'
 " omni complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
+" Find ctags (only checking /usr/bin and /usr/local)
+function! FindCtags()
+    if filereadable("/usr/local/bin/ctags")
+        return "/usr/local/bin/ctags"
+    elseif filereadable("/usr/bin/ctags")
+        return "/usr/bin/ctags"
+    endif
+endfunction
+
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
     let _s=@/
@@ -42,6 +51,9 @@ au BufNewFile,BufRead *.ns set filetype=tcl
 call pathogen#infect('~/src/dotfiles/vimplugs')
 Helptags
 
+" TagList
+let Tlist_Ctags_Cmd=FindCtags()
+map T :TlistToggle<cr>
 
 
 
