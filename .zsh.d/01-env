@@ -17,7 +17,7 @@ setopt appendhistory
 unsetopt autocd beep extendedglob nomatch notify
 bindkey -e
 
-if [ "$(uname)x" = "Darwinx" ]; then
+if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
     export LSCOLORS="gxfxcxdxbxegedabagacad"
 fi
 

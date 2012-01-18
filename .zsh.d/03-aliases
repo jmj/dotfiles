@@ -1,6 +1,6 @@
 
 alias c=clear
-if [ "$(uname)x" = "Darwinx" ]; then
+if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
     alias ls="ls -G"
 else
     alias ls="ls --color=auto"
