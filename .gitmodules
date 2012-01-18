@@ -1,0 +1,3 @@
+[submodule "vimplugs/vim-redmine"]
+	path = vimplugs/vim-redmine
+	url = https://github.com/toritori0318/vim-redmine.git
