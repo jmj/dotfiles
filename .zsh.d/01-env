@@ -21,3 +21,6 @@ if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
     export LSCOLORS="gxfxcxdxbxegedabagacad"
 fi
 
+if [[ "${HOST}" = "boss" || "${HOST}" == users ]]; then
+    path=(/usr/testbed/bin /usr/testbed/sbin ${path})
+fi
