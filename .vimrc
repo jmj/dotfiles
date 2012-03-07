@@ -55,8 +55,6 @@ Helptags
 let Tlist_Ctags_Cmd=FindCtags()
 map T :TlistToggle<cr>
 
-
-
 color torte
 " Solarize
 "set background=dark

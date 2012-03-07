@@ -1,6 +1,6 @@
 
 export EDITOR=vim
-export PYTHONPATH=/home/jjones/pylib
+export PYTHONPATH=${HOME}/pylib
 
 path=(. ~/bin /usr/local/bin /bin /usr/bin /sbin /usr/sbin /usr/local/sbin $path)
 

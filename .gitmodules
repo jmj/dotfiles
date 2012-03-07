@@ -1,0 +1,6 @@
+[submodule "vimplugs/vim-redmine"]
+	path = vimplugs/vim-redmine
+	url = https://github.com/toritori0318/vim-redmine.git
+[submodule "vimplugs/vim-webapi"]
+	path = vimplugs/vim-webapi
+	url = https://github.com/mattn/webapi-vim.git
