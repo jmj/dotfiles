@@ -64,3 +64,30 @@ color torte
 set t_Co=256
 set laststatus=2
 let g:Powerline_symbols = 'unicode'
+
+" python mode
+" Disable pylint checking every save
+let g:pymode_lint_write = 1
+" Set key 'R' for run python code
+let g:pymode_run = 1
+let g:pymode_run_key = '<leader>r'
+
+" Load pylint code plugin
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8,pylint,mccabe"
+let g:pymode_lint_ignore = "E501"
+let g:pymode_lint_onfly = 1
+let g:pymode_lint_message = 1
+let g:pymode_lint_signs = 1
+
+" auto folding
+let g:pymode_folding = 0
+
+" fixup for virtualenv
+let g:pymode_virtualenv = 1
+
+" Autoremove unused whitespaces (already do this, so disable)
+let g:pymode_utils_whitespaces = 0
+
+" get rid of line numbering
+let g:pymode_options_other = 0
