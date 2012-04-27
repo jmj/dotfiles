@@ -4,3 +4,6 @@
 [submodule "vimplugs/vim-webapi"]
 	path = vimplugs/vim-webapi
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "vimplugs/python-mode"]
+	path = vimplugs/python-mode
+	url = git://github.com/klen/python-mode.git
