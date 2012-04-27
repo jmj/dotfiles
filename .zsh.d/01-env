@@ -2,7 +2,7 @@
 export EDITOR=vim
 export PYTHONPATH=${HOME}/pylib
 
-path=(. ~/bin /usr/local/bin /bin /usr/bin /sbin /usr/sbin /usr/local/sbin $path)
+path=(. ~/bin /usr/local/share/python /usr/local/bin /bin /usr/bin /sbin /usr/sbin /usr/local/sbin $path)
 
 if which dircolors > /dev/null; then
     eval `dircolors -b`
