@@ -73,10 +73,10 @@ let g:pymode_run = 1
 let g:pymode_run_key = '<leader>r'
 
 " Load pylint code plugin
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8,pylint,mccabe"
+let g:pymode_lint = 0
+let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_ignore = "E501"
-let g:pymode_lint_onfly = 1
+let g:pymode_lint_onfly = 0
 let g:pymode_lint_message = 1
 let g:pymode_lint_signs = 1
 
@@ -91,3 +91,12 @@ let g:pymode_utils_whitespaces = 0
 
 " get rid of line numbering
 let g:pymode_options_other = 0
+
+" GUI Stuff
+if has('gui_running')
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guifont=Monaco:h12
+    set hidden
+endif

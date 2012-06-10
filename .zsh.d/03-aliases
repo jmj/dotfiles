@@ -2,6 +2,8 @@
 alias c=clear
 if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
     alias ls="ls -G"
+    alias vi=mvim
+    alias vim=mvim
 else
     alias ls="ls --color=auto"
 fi
