@@ -100,3 +100,6 @@ if has('gui_running')
     set guifont=Monaco:h12
     set hidden
 endif
+
+"  If I forget to sudo use !!
+cmap w!! %!sudo tee > /dev/null %
