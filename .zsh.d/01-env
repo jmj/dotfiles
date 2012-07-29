@@ -23,6 +23,7 @@ fi
 
 export VIRTUALENVWRAPPER_PYTHON=$(which python2.7)
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS="-p ${VIRTUALENVWRAPPER_PYTHON}"
+export PROJECT_HOME=$HOME/src
 export WORKON_HOME=$HOME/.virtualenvs
 if [[ ! -d ${WORKON_HOME} ]]; then
     mkdir -p ${WORKON_HOME}
