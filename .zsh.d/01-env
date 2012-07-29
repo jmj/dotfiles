@@ -21,7 +21,13 @@ if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
     export LSCOLORS="gxfxcxdxbxegedabagacad"
 fi
 
-export VIRTUALENVWRAPPER_PYTHON=$(which python2.7)
+if [[ -e /usr/local/python27/bin/python2.7 ]]; then
+    # Special cases
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/python27/bin/python2.7
+else
+    export VIRTUALENVWRAPPER_PYTHON=$(which python2.7)
+fi
+
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS="-p ${VIRTUALENVWRAPPER_PYTHON}"
 export PROJECT_HOME=$HOME/src
 export WORKON_HOME=$HOME/.virtualenvs
