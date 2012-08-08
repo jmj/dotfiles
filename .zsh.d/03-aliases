@@ -2,9 +2,24 @@
 alias c=clear
 if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
     alias ls="ls -G"
-    alias vi=mvim
-    alias vim=mvim
+#    alias vi=mvim
+#    alias vim=mvim
+
+    vi () {
+        sl=$(mvim --serverlist|tr "\n" " ");
+        if [[ -z ${sl} ]] ; then
+            mvim $*
+        else
+            servers=(${(s| |)sl})
+            mvim --servername ${servers[1]} --remote $*
+        fi
+    }
+
+    alias vim=vi
+
+
 else
     alias ls="ls --color=auto"
 fi
+
 

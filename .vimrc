@@ -12,6 +12,7 @@ set expandtab
 set hidden
 let Tlist_Ctags_Cmd='/usr/bin/ctags-exuberant'
 
+
 " omni complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
@@ -99,6 +100,8 @@ if has('gui_running')
     set guioptions-=L
     set guifont=Monaco:h12
     set hidden
+    " start with 80 columns
+    set columns=80
 endif
 
 "  If I forget to sudo use !!
