@@ -43,6 +43,9 @@ if has("autocmd")
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
 
     autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+
+    autocmd FileType go compiler go
+    autocmd BufWritePost *.go make
 endif
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
