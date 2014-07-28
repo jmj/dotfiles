@@ -2,7 +2,9 @@
 export EDITOR=vim
 export PYTHONPATH=${HOME}/pylib
 
-path=(. ~/bin /usr/local/share/python /usr/local/bin /bin /usr/bin /sbin /usr/sbin /usr/local/sbin $path)
+path=(. ~/bin /usr/local/share/python /usr/local/bin /bin /usr/bin /sbin /usr/sbin $path)
+
+#path=(/Applications/Xcode.app/Contents/Developer/usr/bin /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin $path)
 
 if which dircolors > /dev/null; then
     eval `dircolors -b`

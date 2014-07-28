@@ -14,3 +14,18 @@ zstyle ':completion:*' substitute 1
 zstyle :compinstall filename '/home/jjones/.zshrc'
 
 setopt correct
+
+if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+
+    autoload compinit
+    compinit
+fi
+
+#    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#        autoload bashcompinit
+#        bashcompinit
+#        source $(brew --prefix)/etc/bash_completion
+#    fi
+#fi
+

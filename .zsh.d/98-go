@@ -1,0 +1,9 @@
+if [[ "$(uname)x" = "Darwinx" || "$(uname)x" = "FreeBSDx" ]]; then
+    export GOPATH=/Users/jmjone/src/go
+    export GOROOT=/usr/local/go
+    path=($path /usr/local/go/bin ${GOPATH}/bin)
+else
+    export GOPATH=/home/jmjone/src/go
+    export GOROOT=/usr/local/go
+    path=($path /usr/local/go/bin ${GOPATH}/bin)
+fi
