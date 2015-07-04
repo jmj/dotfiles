@@ -10,6 +10,7 @@ set showmatch
 set ruler
 set expandtab
 set hidden
+set clipboard=unnamed
 let Tlist_Ctags_Cmd='/usr/bin/ctags-exuberant'
 
 
@@ -44,8 +45,10 @@ if has("autocmd")
 
     autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 
-    autocmd FileType go compiler go
-    autocmd BufWritePost *.go make
+    autocmd FileType go setlocal noexpandtab
+    " autocmd FileType go compiler go
+    " autocmd BufWritePost *.go make
+
 endif
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
