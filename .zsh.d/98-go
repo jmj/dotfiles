@@ -7,3 +7,6 @@ else
     export GOROOT=/usr/local/go
     path=($path /usr/local/go/bin ${GOPATH}/bin)
 fi
+
+# Go 1.5 vendor support
+export GO15VENDOREXPERIMENT=1
