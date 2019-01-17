@@ -2,7 +2,7 @@
 export EDITOR=vim
 export PYTHONPATH=${HOME}/pylib
 
-path=(. ~/bin /usr/local/share/python /usr/local/bin /bin /usr/bin /sbin /usr/sbin $path)
+path=(. ~/bin ~/.cargo/bin /usr/local/share/python /usr/local/bin /bin /usr/bin /sbin /usr/sbin /snap/bin $path)
 
 #path=(/Applications/Xcode.app/Contents/Developer/usr/bin /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin $path)
 
@@ -48,3 +48,5 @@ fi
 if [[ "${HOST}" = "boss" || "${HOST}" == users ]]; then
     path=(/usr/testbed/bin /usr/testbed/sbin ${path})
 fi
+
+export VAULT_ADDR=http://vault.iti.lab:8200
