@@ -50,3 +50,5 @@ if [[ "${HOST}" = "boss" || "${HOST}" == users ]]; then
 fi
 
 export VAULT_ADDR=http://vault.iti.lab:8200
+
+umask 022

@@ -1,5 +1,5 @@
 export GOVC_URL=https://vcenter.iti.lab/sdk
-export GOVC_USERNAME=jmjone
+export GOVC_USERNAME=jmj
 export GOVC_PASSWORD=""
 export GOVC_INSECURE=true
 export GOVC_DATACENTER=Testbed
